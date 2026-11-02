@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>InterestRateDecision.com Open Source: Central Bank Data, API and Widgets</title>
+<meta name="description" content="Free central bank interest rate data, a JavaScript and Python API, and website widgets from InterestRateDecision.com: every decision of the Fed, ECB, BoE, BoJ and more since 2008.">
+<link rel="canonical" href="https://interest-rate-decision.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="InterestRateDecision.com: open data, API and widgets">
+<meta property="og:description" content="Every central bank interest rate decision since 2008, free as data, code and widgets.">
+<meta property="og:url" content="https://interest-rate-decision.github.io/">
+<meta property="og:image" content="https://interest-rate-decision.github.io/assets/banner.png">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"Organization","@id":"https://interestratedecision.com/#org","name":"InterestRateDecision.com","url":"https://interestratedecision.com/","sameAs":["https://github.com/Interest-Rate-Decision"]},
+{"@type":"Dataset","name":"Central bank interest rates since 2008","description":"Every interest rate decision of the Federal Reserve, ECB, Bank of England, Bank of Japan, Bank of Canada, RBA, RBNZ, SNB, Norges Bank and Riksbank since 2008, as CSV and JSON, updated after every decision.","url":"https://interest-rate-decision.github.io/central-bank-interest-rates/","sameAs":"https://interestratedecision.com/central-bank-data/","creator":{"@id":"https://interestratedecision.com/#org"},"isAccessibleForFree":true,"license":"https://interestratedecision.com/central-bank-data/#licence","keywords":["interest rates","central banks","monetary policy","federal funds rate"],"distribution":[{"@type":"DataDownload","encodingFormat":"text/csv","contentUrl":"https://interestratedecision.com/data/decisions.csv"},{"@type":"DataDownload","encodingFormat":"application/json","contentUrl":"https://interestratedecision.com/data/rates.json"}]}
+]}
+</script>
+<style>
+  :root { --ink: #070b14; --text: #0a1020; --muted: #566176; --line: #e3e7ee; --accent: #3d5afe; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 17px/1.6 system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; color: var(--text); background: #f4f6f9; }
+  a { color: var(--accent); }
+  header { background: var(--ink) radial-gradient(50% 80% at 80% 0%, rgba(61,90,254,.35), transparent 70%); color: #e8ecf4; padding: 56px 24px 64px; }
+  .wrap { max-width: 1080px; margin: 0 auto; }
+  .brand { font-weight: 800; color: #e8ecf4; text-decoration: none; }
+  .brand b { color: #8ea2ff; }
+  h1 { font-size: clamp(32px, 5vw, 52px); line-height: 1.06; letter-spacing: -.03em; margin: 28px 0 14px; }
+  .lead { font-size: 19px; color: #aab4c8; max-width: 760px; margin: 0; }
+  main { padding: 48px 24px; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 20px; }
+  .card { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 24px; }
+  .card h2 { font-size: 21px; margin: 0 0 8px; }
+  .card h2 a { color: var(--text); text-decoration: none; }
+  .card p { color: var(--muted); margin: 0 0 14px; font-size: 15.5px; }
+  .card .links a { margin-right: 14px; font-weight: 600; font-size: 15px; }
+  pre { background: var(--ink); color: #e8ecf4; padding: 14px; border-radius: 10px; font-size: 13px; overflow-x: auto; margin: 0 0 14px; }
+  .more { margin-top: 48px; }
+  .more ul { padding-left: 1.2em; }
+  footer { padding: 32px 24px; color: var(--muted); font-size: 14px; text-align: center; border-top: 1px solid var(--line); }
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <a class="brand" href="https://interestratedecision.com/">InterestRate<b>Decision</b>.com</a>
+  <h1>Central bank interest rate data, API and widgets</h1>
+  <p class="lead">Every interest rate decision of the Federal Reserve, ECB, Bank of England, Bank of Japan, Bank of Canada, RBA, RBNZ, SNB, Norges Bank and Riksbank since 2008. Free as a dataset, as code and as widgets for any website.</p>
+</div></header>
+<main><div class="wrap">
+  <div class="cards">
+    <div class="card">
+      <h2><a href="https://interest-rate-decision.github.io/central-bank-interest-rates/">Central bank interest rates dataset</a></h2>
+      <p>Every decision since 2008 as CSV and JSON, updated automatically. Ready for pandas, R, Excel and Google Sheets.</p>
+      <pre>=IMPORTDATA("https://interestratedecision.com/data/decisions.csv")</pre>
+      <div class="links"><a href="https://interest-rate-decision.github.io/central-bank-interest-rates/">Docs</a><a href="https://github.com/Interest-Rate-Decision/central-bank-interest-rates">GitHub</a></div>
+    </div>
+    <div class="card">
+      <h2><a href="https://interest-rate-decision.github.io/interest-rate-decisions/">Interest rate decisions API</a></h2>
+      <p>Clients for JavaScript and Python: today's policy rates, the next central bank meetings and every decision since 2008.</p>
+      <pre>npx interest-rate-decisions</pre>
+      <div class="links"><a href="https://interest-rate-decision.github.io/interest-rate-decisions/">Docs</a><a href="https://github.com/Interest-Rate-Decision/interest-rate-decisions">GitHub</a></div>
+    </div>
+    <div class="card">
+      <h2><a href="https://interest-rate-decision.github.io/widgets/">Central bank widgets</a></h2>
+      <p>A live economic calendar, decision countdown, rate cut odds, rates table, rate differentials and a rate cut calculator. One line of code.</p>
+      <pre>&lt;script async src="https://interestratedecision.com/embed.js"&gt;&lt;/script&gt;</pre>
+      <div class="links"><a href="https://interest-rate-decision.github.io/widgets/">Live demo</a><a href="https://github.com/Interest-Rate-Decision/widgets">GitHub</a></div>
+    </div>
+  </div>
+  <section class="more">
+    <h2>On InterestRateDecision.com</h2>
+    <ul>
+      <li><a href="https://interestratedecision.com/central-bank-rates/">Central bank interest rates today</a>, side by side</li>
+      <li><a href="https://interestratedecision.com/calendar/">Central bank meeting calendar</a>, with times in your zone</li>
+      <li><a href="https://interestratedecision.com/rate-odds/">Rate cut odds</a> for every bank's next meetings, with their record</li>
+      <li><a href="https://interestratedecision.com/fed/">Fed interest rate decision</a> and <a href="https://interestratedecision.com/fed/rate-history/">fed funds rate history</a></li>
+      <li><a href="https://interestratedecision.com/ecb/">ECB interest rate decision</a> and <a href="https://interestratedecision.com/boe/">Bank of England interest rate decision</a></li>
+      <li><a href="https://interestratedecision.com/blog/how-often-do-central-banks-surprise/">How often do central banks surprise?</a> and <a href="https://interestratedecision.com/blog/can-central-bank-decisions-be-predicted/">Can central bank decisions be predicted?</a></li>
+      <li><a href="https://interestratedecision.com/alerts/">Decision alerts</a> in Discord, Slack or Telegram</li>
+    </ul>
+  </section>
+</div></main>
+<footer>Data free to reuse with a link to <a href="https://interestratedecision.com/">InterestRateDecision.com</a> · <a href="https://github.com/Interest-Rate-Decision">GitHub</a></footer>
+</body>
+</html>

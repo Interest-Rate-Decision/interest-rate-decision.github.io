@@ -1,0 +1,6 @@
+title: InterestRateDecision.com open source
+url: https://interest-rate-decision.github.io
+plugins:
+  - jekyll-sitemap
+exclude:
+  - README.md
